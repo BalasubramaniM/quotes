@@ -7,3 +7,9 @@
 .quote-box i {
 	margin-right: 0.4em;
 }
+
+.info {
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+}

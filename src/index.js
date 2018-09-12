@@ -50,24 +50,52 @@
 		return quotesArr[Math.floor(quotesArr.length * Math.random())];
 	};
 
+	/**
+	 * Generate random colour from set of colours.
+	 * @param  {Array} colours [Array of colours.]
+	 * @return {String}        [Single colour.]
+	 */
 	const getRandomColour = colours => {
 		let coloursArr = [...colours];
 		return coloursArr[Math.floor(coloursArr.length * Math.random())];
 	};
 
+	/**
+	 * Get quotes from API, parse it and set in global "quotes" variable.
+	 * @param  {Object} err       [Error value]
+	 * @param  {Array}  quotesArr [Quotes array value]
+	 */
 	const getQuotes = (err, quotesArr) => {
 		if (!err) {
 			if (typeof quotesArr === "string") {
 				quotesArr = JSON.parse(quotesArr);
 			}
 
-			let quote = getRandomQuote(quotesArr.quotes);
-			let colour = getRandomColour(colours);
+			quotes = quotesArr;
 
-			document.getElementById("text").innerHTML = quote.quote;
-			document.getElementById("author").innerHTML = quote.author;
-			document.getElementById("section").classList.add(colour);
+			// Binding event listener to next quote button.
+			let nextQuoteEl = document.getElementById("next-quote");
+			nextQuoteEl.addEventListener("click", setQuote);
+
+			// Calling setQuote to initialize quote for the first time.
+			setQuote();
 		}
+	};
+
+	/**
+	 * Set quote and colour each time the function is called.
+	 */
+	const setQuote = () => {
+		let quotesArr = { ...quotes };
+
+		let quote = getRandomQuote(quotesArr.quotes);
+		let colour = getRandomColour(colours);
+
+		let className = `hero ${colour} is-fullheight`;
+
+		document.getElementById("text").innerHTML = quote.quote;
+		document.getElementById("author").innerHTML = quote.author;
+		document.getElementById("section").setAttribute("class", className);
 	};
 
 	makeAjax(quotesURL, "GET", getQuotes);

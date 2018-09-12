@@ -8,12 +8,13 @@
 
 	// Colours to be used throughout the app.
 	const colours = [
-		"#00d1b2",
-		"#209cee",
-		"#3273dc",
-		"#23d160",
-		"#ffdd57",
-		"#ff3860"
+		"is-light",
+		"is-dark",
+		"is-danger",
+		"is-warning",
+		"is-success",
+		"is-info",
+		"is-primary"
 	];
 
 	/**
@@ -46,10 +47,12 @@
 	 */
 	const getRandomQuote = quotes => {
 		let quotesArr = [...quotes];
+		return quotesArr[Math.floor(quotesArr.length * Math.random())];
+	};
 
-		let randomQuote =
-			quotesArr[Math.floor(quotesArr.length * Math.random())];
-		return randomQuote;
+	const getRandomColour = colours => {
+		let coloursArr = [...colours];
+		return coloursArr[Math.floor(coloursArr.length * Math.random())];
 	};
 
 	const getQuotes = (err, quotesArr) => {
@@ -59,10 +62,11 @@
 			}
 
 			let quote = getRandomQuote(quotesArr.quotes);
+			let colour = getRandomColour(colours);
 
-			console.log(quote);
-		} else {
-			console.log(err);
+			document.getElementById("text").innerHTML = quote.quote;
+			document.getElementById("author").innerHTML = quote.author;
+			document.getElementById("section").classList.add(colour);
 		}
 	};
 

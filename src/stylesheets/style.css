@@ -1,17 +1,9 @@
-.quote-box .subtitle {
-	margin-top: 0.4em;
-}
-
 .quote-box {
 	display: flex;
+	max-width: 60%;
+	margin: auto;
 }
 
 .quote-box i {
 	margin-right: 0.4em;
-}
-
-.extremeHero-divider {
-	position: relative;
-	border-bottom: 1px solid hsl(0, 0%, 96%);
-	margin: 24px auto;
 }

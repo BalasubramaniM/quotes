@@ -4,7 +4,7 @@ Simplistic quotes app for Chrome browser.
 
 ## Getting Started
 
-Open `index.html` file in your browser and see how quotes app work.
+Check the live app at [balsu.me/quotes](https://balsu.me/quotes)
 
 ## Authors
 

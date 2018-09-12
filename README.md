@@ -4,7 +4,7 @@ Simplistic quotes app for Chrome browser.
 
 ## Getting Started
 
-Open `index.html` file in your browser and see how quotes app works in your browser.
+Open `index.html` file in your browser and see how quotes app work.
 
 ## Authors
 
@@ -12,4 +12,4 @@ Open `index.html` file in your browser and see how quotes app works in your brow
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details

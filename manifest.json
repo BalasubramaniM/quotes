@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Quotes",
 	"description": "Simplistic quotes app for your Chrome browser.",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"author": "Balasubramani M",
 	"browser_action": {
 		"default_title": "Quotes",

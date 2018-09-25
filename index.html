@@ -4,13 +4,28 @@
 <head>
     <title>Quotes</title>
     <meta charset="utf-8">
+    <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" type="image/png" href="src/assets/favicon.png" />
     <link rel="stylesheet" type="text/css" href="src/stylesheets/style.css">
     <!-- BULMA CSS Framework -->
     <link rel="stylesheet" type="text/css" href="src/stylesheets/bulma.min.css">
     <!-- Font Awesome v5.3.1 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src/stylesheets/all.css">
     <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('load', async e => {
+        await fetchQuotes();
+
+        if ('serviceWorker' in navigator) {
+            try {
+                navigator.serviceWorker.register("service-worker.js");
+                console.log("Service Worker registered.");
+            } catch (error) {
+                console.log("Service Worker failed")
+            }
+        }
+    })
+    </script>
 </head>
 
 <body>

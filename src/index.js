@@ -32,9 +32,8 @@ async function fetchQuotes() {
 	 * @param  {Array} colours [Array of colours.]
 	 * @return {String}        [Single colour.]
 	 */
-	const getRandomColour = colours => {
-		let coloursArr = [...colours];
-		return coloursArr[Math.floor(coloursArr.length * Math.random())];
+	const getRandomColour = () => {
+		return colours[Math.floor(colours.length * Math.random())];
 	};
 
 	/**
@@ -42,7 +41,7 @@ async function fetchQuotes() {
 	 */
 	const setQuote = () => {
 		let quote = getRandomQuote(quotes.quotes);
-		let colour = getRandomColour(colours);
+		let colour = getRandomColour();
 
 		let className = `hero ${colour} is-fullheight`;
 

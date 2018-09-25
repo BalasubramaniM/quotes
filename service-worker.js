@@ -4,7 +4,8 @@ const staticAssets = [
 	"./src/stylesheets/bulma.min.css",
 	"./src/stylesheets/all.css",
 	"./src/webfonts/fa-solid-900.woff2",
-	"./src/index.js"
+	"./src/index.js",
+	"./index.js"
 ];
 
 self.addEventListener("install", async event => {

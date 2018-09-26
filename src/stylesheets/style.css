@@ -13,3 +13,7 @@
 	bottom: 3%;
 	right: 3%;
 }
+
+.hide {
+	display: none !important;
+}

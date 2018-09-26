@@ -48,6 +48,12 @@ async function fetchQuotes() {
 		document.getElementById("text").innerHTML = quote.quote;
 		document.getElementById("author").innerHTML = quote.author;
 		document.getElementById("section").setAttribute("class", className);
+
+		// Showing icons back.
+		let icons = document.getElementsByTagName("i");
+		for (var i = icons.length - 1; i >= 0; i--) {
+			icons[i].classList.remove("hide");
+		}
 	};
 
 	let nextQuoteEl = document.getElementById("next-quote");

@@ -6,13 +6,17 @@ Simplistic quotes app for Chrome browser.
 
 Check the live app at [balsu.me/quotes](https://balsu.me/quotes)
 
+Press space to generate new Quotes.
+
+Navigate to Quotes you have generated using arrow keys.
+
 ## Chorme Extension
 
 [Quotes](https://chrome.google.com/webstore/detail/quotes/dcjcipkkpjkpjifchkjoagdfmjjegehf) - Get a fruitful quote with an open background colour in a minimalistic manner each moment when you open a new tab.
 
 ## Authors
 
-*   **Balasubramani M** - _Initial work_ - [Balasubramani M](https://github.com/balasubramanim)
+-   **Balasubramani M** - _Initial work_ - [Balasubramani M](https://github.com/balasubramanim)
 
 ## License
 

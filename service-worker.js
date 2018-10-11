@@ -5,6 +5,7 @@ const staticAssets = [
 	"./src/stylesheets/all.css",
 	"./src/webfonts/fa-solid-900.woff2",
 	"./src/index.js",
+	"./src/mousetrap.min.js",
 	"./index.js"
 ];
 

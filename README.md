@@ -4,7 +4,7 @@ Simplistic quotes app for Chrome browser.
 
 ## Getting Started
 
-Check the live app at [balsu.me/quotes](https://balsu.me/quotes)
+Check the live app at [balasubramanim.github.io/quotes](https://balasubramanim.github.io/quotes/)
 
 Press space to generate new Quotes.
 
